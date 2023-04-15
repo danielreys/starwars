@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <body>
+        <h1>Characters</h1>
+        <ul>
+            {% for character in characters %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ character.name }}</h5>
+                        <p class="card-text">{{ character.mass }}</p>
+                        <p class="card-text">{{ character.height }}</p>
+                        <p class="card-text">{{ character.gender }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </ul>
+    </body>
+{% endblock %}
